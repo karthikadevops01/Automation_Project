@@ -35,7 +35,7 @@ echo "Get log file size and append data to inventory file"
 size=$(sudo stat -c '%s' $file)
 filename=$(basename -- "$file")
 f="${filename%%.*}"
-time="${f:17}"
+time="${f:20}"
 echo "httpd-logs        $time        tar     $size" >> /var/www/html/inventory.html
 echo
 echo "Check if cronjob is created, if not create it"
